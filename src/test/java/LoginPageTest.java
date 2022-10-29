@@ -22,6 +22,7 @@ public class LoginPageTest {
         driver.navigate().to("https://www.saucedemo.com/v1/");
         driver.manage().window().maximize();
         LoginPage loginPage= new LoginPage(driver);
+        assertTrue(loginPage.isLoaded());
         loginPage.login();
     }
 
