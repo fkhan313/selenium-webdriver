@@ -18,7 +18,7 @@ public class LoginPageTest {
         driver = new ChromeDriver();
     }
     @Test
-    public void smarterTest1 () {
+    public void loginTest () {
         driver.navigate().to("https://www.saucedemo.com/v1/");
         driver.manage().window().maximize();
         LoginPage loginPage= new LoginPage(driver);
