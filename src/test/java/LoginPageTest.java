@@ -1,9 +1,10 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -12,7 +13,7 @@ public class LoginPageTest {
 
     WebDriver driver;
 
-    @Before
+    @BeforeMethod
     public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -26,7 +27,7 @@ public class LoginPageTest {
         loginPage.login();
     }
 
-    @After
+    @AfterMethod
     public void tearDown () throws InterruptedException {
         Thread.sleep(3000);
         driver.quit();
