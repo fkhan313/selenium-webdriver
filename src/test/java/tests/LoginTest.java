@@ -1,17 +1,17 @@
-import io.github.bonigarcia.wdm.WebDriverManager;
+package tests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import pages.LoginPage;
 
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
 
-public class LoginPageTest {
-
+public class LoginTest {
     WebDriver driver;
 
     @BeforeMethod
@@ -36,4 +36,5 @@ public class LoginPageTest {
         driver.quit();
         Reporter.log("Browser closed",true);
     }
+
 }
