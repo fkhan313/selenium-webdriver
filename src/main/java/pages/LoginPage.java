@@ -40,10 +40,10 @@ public class LoginPage  {
         //return driver.findElement(By.id("login-button"));
     }
 
-    public void login() {
+    public void login(String username, String password) {
 
-        getUsernameField().sendKeys("standard_user");
-        getPasswordField().sendKeys("secret_sauce");
+        getUsernameField().sendKeys(username);
+        getPasswordField().sendKeys(password);
         getLoginButton().click();
     }
 
