@@ -4,7 +4,8 @@
     <test verbose="2" preserve-order="true" name="C:/Users/fkhan/OneDrive/Java Projects/selenium-webdriver">
         <classes>
             <class name="tests.LoginTest">
-                <methods><include name="loginTest"/>
+                <methods>
+                    <include name="loginTest"/>
                 </methods>
             </class>
         </classes>
