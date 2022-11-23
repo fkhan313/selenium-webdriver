@@ -3,6 +3,7 @@ package tests;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -11,9 +12,6 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import util.ExcelUtil;
 
-import javax.swing.*;
-
-import static org.junit.Assert.assertTrue;
 
 public class LoginTest {
     WebDriver driver;
@@ -35,8 +33,12 @@ public class LoginTest {
         driver.navigate().to("https://www.saucedemo.com/v1/");
         driver.manage().window().maximize();
         LoginPage loginPage= new LoginPage(driver);
-        assertTrue(loginPage.isLoaded());
+        //assertTrue(loginPage.isLoaded());
+        Assert.assertTrue(loginPage.isLoaded());
         loginPage.login(username, password);
+        String actualTitle=driver.getTitle();
+        String expectedTitle = "Swag Labs";
+        Assert.assertEquals(actualTitle,expectedTitle);
         Reporter.log("Clicked on Login button", true);
     }
 
