@@ -1,5 +1,6 @@
 package pages;
 
+import base.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,12 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class LoginPage  {
+public class LoginPage extends TestBase  {
     private WebDriver driver;
 
 
     public LoginPage(WebDriver driver) {
-        //super(driver);
         this.driver = driver;
     }
 
@@ -42,9 +42,10 @@ public class LoginPage  {
 
     public void login(String username, String password) {
 
-        getUsernameField().sendKeys(username);
-        getPasswordField().sendKeys(password);
-        getLoginButton().click();
+            getUsernameField().sendKeys(username);
+            getPasswordField().sendKeys(password);
+            getLoginButton().click();
+
     }
 
     public boolean isLoaded() {

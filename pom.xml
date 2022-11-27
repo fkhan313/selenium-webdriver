@@ -110,6 +110,9 @@
             <scope>compile</scope>
         </dependency>
 
+
+
+
         <!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
         <dependency>
             <groupId>com.relevantcodes</groupId>
@@ -120,6 +123,12 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.6.1</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.3.0</version>
             <scope>compile</scope>
         </dependency>
 
