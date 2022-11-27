@@ -6,14 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.LoginPage;
+import Listeners.ExtentReporterNG;
 import util.ExcelUtil;
 
 
+@Listeners(ExtentReporterNG.class)
 public class LoginTest extends TestBase {
     LoginPage loginPage;
 
