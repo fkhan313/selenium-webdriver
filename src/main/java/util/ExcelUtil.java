@@ -1,5 +1,6 @@
 package util;
 
+import base.TestBase;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -8,11 +9,12 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class ExcelUtil {
+public class ExcelUtil extends TestBase {
     public static Workbook book;
     public static Sheet sheet;
 
-    public static String TEST_DATA_SHEET_PATH = "C:\\Users\\fkhan\\OneDrive\\Java Projects\\selenium-webdriver\\src\\main\\java\\testdata\\LoginTestData.xlsx";
+    //public static String TEST_DATA_SHEET_PATH = System.getProperty("user.dir")+"\\src\\main\\java\\testdata\\TestData.xlsx";
+    public static String TEST_DATA_SHEET_PATH = System.getProperty("user.dir")+ prop.getProperty("testDataFilePath") ;
 
     public static Object[][] getTestData(String sheetName) {
 
