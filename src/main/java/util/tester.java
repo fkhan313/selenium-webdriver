@@ -1,12 +1,11 @@
 package util;
 
-import base.TestBase;
 
-public class tester extends TestBase {
+public class tester  {
 
     public static void main(String[] args) {
         //TOTPGenerator.getTwoFactorCode();
-        System.out.println(TOTPGenerator.returnOTP("mfa"));
+        TOTPGenerator.returnOTP("mfa");
         //System.out.println(TOTPGenerator.getKey("mfa"));
 
     }
