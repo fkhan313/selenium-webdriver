@@ -25,7 +25,8 @@ public class TestBase {
 
         try {
             prop = new Properties();
-            FileInputStream input = new FileInputStream("C:/Users/fkhan/OneDrive/Java Projects/selenium-webdriver/src/main/java/config/config.properties");
+            //FileInputStream input = new FileInputStream("C:/Users/fkhan/OneDrive/Java Projects/selenium-webdriver/src/main/java/config/config.properties");
+            FileInputStream input = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\config\\config.properties");
             prop.load(input);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
