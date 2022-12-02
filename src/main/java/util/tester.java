@@ -7,6 +7,10 @@ public class tester  {
         //TOTPGenerator.getTwoFactorCode();
         TOTPGenerator.returnOTP("mfa");
         //System.out.println(TOTPGenerator.getKey("mfa"));
+        //TOTPGenerator.testMap();
+        //System.out.println(TOTPGenerator.getValuefromMap("mfa"));
 
     }
+
+
 }
