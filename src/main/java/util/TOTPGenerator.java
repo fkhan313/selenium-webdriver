@@ -58,7 +58,7 @@ public class TOTPGenerator {
     public static void testMap(){
 
         TestBase t1= new TestBase();
-        String mapKey= prop.getProperty("firstUserSecret");
+        String mapKey= prop.getProperty("farhantest");
         usersMap.put("mfa",mapKey);
         usersMap.put("mfa5","aafasf4545");
         //System.out.println(usersMap);
