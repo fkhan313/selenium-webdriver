@@ -37,8 +37,6 @@ public class TOTPGenerator {
 
 
 
-
-
     public static void testMap(){
 
         TestBase t1= new TestBase();

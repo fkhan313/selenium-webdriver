@@ -12,10 +12,10 @@ import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
-public class practice {
+public class ScreenshotExample {
     /*private static WebDriver driver;
 
-    public practice(WebDriver driver) {
+    public ScreenshotExample(WebDriver driver) {
         this.driver = driver;
     }*/
 
@@ -27,6 +27,9 @@ public class practice {
         driver.manage().window().maximize();
         driver.get("https://429-kube.shibumi.com/shibumi/93a7d7fe-353a-44a6-95ac-213dc48dad21/apps");
         driver.findElement(By.id("UsernameEntry__username")).sendKeys("consultant@shibumi.com");
+
+        //Screenshot example
+
         TakesScreenshot ts= (TakesScreenshot) driver;
         File src= ts.getScreenshotAs(OutputType.FILE);
         File destination= new File("./MyScreenshot.png");
