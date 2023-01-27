@@ -1,6 +1,7 @@
 package tests;
 
 import base.TestBase;
+import helper.Utility;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -36,9 +37,11 @@ public class LoginTest extends TestBase {
         Reporter.log("Application Started",true);
         Assert.assertTrue(loginPage.isLoaded());
         loginPage.login(username, password);
+        Utility.captureScreenshot(driver);
         String actualTitle=driver.getTitle();
         String expectedTitle = "Swag Labs";
         Assert.assertEquals(actualTitle,expectedTitle);
+        Utility.captureScreenshot(driver);
         Reporter.log("Clicked on Login button", true);
     }
 
