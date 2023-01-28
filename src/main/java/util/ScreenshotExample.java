@@ -28,6 +28,7 @@ public class ScreenshotExample {
         driver.get("https://429-kube.shibumi.com/shibumi/93a7d7fe-353a-44a6-95ac-213dc48dad21/apps");
         driver.findElement(By.id("UsernameEntry__username")).sendKeys("consultant@shibumi.com");
 
+
         //Screenshot example
 
         TakesScreenshot ts= (TakesScreenshot) driver;

@@ -55,24 +55,26 @@ public class Utility {
 
     public static void captureScreenshot(WebDriver driver) {
         try {
+
             FileHandler.copy(((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE), new File("./screenshots/Screenshot_" + getCurrentTime() + ".png"));
+
         } catch (IOException e) {
             System.out.println("Something went wrong " + e.getMessage());
         }
     }
 
     public static String getCurrentTime() {
-        String date = new SimpleDateFormat("HH:mm:ss_dd_MM_yyyy").format(new Date());
 
+        String date = new SimpleDateFormat("MM_dd_yyyy_HH_mm_ss").format(new Date());
         return date;
     }
 
     public static void captureScreenshotOfWebElement(WebDriver driver, WebElement element) {
-
         /*
          * 	Implement this for screenshot of WebElement
          *
          */
+
     }
 
 }
