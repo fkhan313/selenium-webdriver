@@ -56,7 +56,8 @@ public class Utility {
     public static void captureScreenshot(WebDriver driver) {
         try {
 
-            FileHandler.copy(((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE), new File("./screenshots/Screenshot_" + getCurrentTime() + ".png"));
+            FileHandler.copy(((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE),
+                    new File("./screenshots/Screenshot_" + getCurrentTime() + ".png"));
 
         } catch (IOException e) {
             System.out.println("Something went wrong " + e.getMessage());

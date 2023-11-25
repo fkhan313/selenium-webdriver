@@ -3,6 +3,7 @@ package base;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import pages.LoginPage;
@@ -40,6 +41,8 @@ public class TestBase {
 
         if(browserName.equals("chrome")){
             WebDriverManager.chromedriver().setup();
+            //ChromeOptions co=new ChromeOptions();
+            //co.addArguments("--remote-allow-origins=*");
             driver = new ChromeDriver();
         }
         else if(browserName.equals("firefox")){

@@ -10,6 +10,8 @@ import org.openqa.selenium.io.FileHandler;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Date;
+import java.sql.Timestamp;
 import java.time.Duration;
 
 public class ScreenshotExample {
@@ -21,7 +23,7 @@ public class ScreenshotExample {
 
     public static void main(String[] args) throws InterruptedException {
 
-        WebDriverManager.chromedriver().setup();
+        /*WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().window().maximize();
@@ -41,7 +43,11 @@ public class ScreenshotExample {
         }
 
         Thread.sleep(500);
-        driver.quit();
+        driver.quit();*/
+
+        Timestamp stamp = new Timestamp(System.currentTimeMillis());
+        Date date = new Date(stamp.getTime());
+        System.out.println(date);
 
     }
 
