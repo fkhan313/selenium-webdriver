@@ -36,6 +36,7 @@ public class FileDownload {
             System.out.println("file is not completely  downloaded");
 
         }
+        driver.quit();
 
     }
 
