@@ -14,7 +14,9 @@ public class FileDownload {
         WebDriver driver = new ChromeDriver();
         driver.get("https://get.jenkins.io/windows-stable/2.426.1/jenkins.msi");
 
-        String downloadPath = "/Users/naveenautomationlabs/Downloads";
+        String downloadPath = "\\C:\\Users\\fkhan\\Downloads";
+
+
         String fileName = "jenkins.msi";
 
         File file = new File(downloadPath, fileName);
